@@ -1,0 +1,34 @@
+from enum import StrEnum
+
+class ErrorCategory(StrEnum):
+    AUTH_ERROR = "AUTH_ERROR"
+    RATE_LIMIT = "RATE_LIMIT"
+    NETWORK_ERROR = "NETWORK_ERROR"
+    DATA_ERROR = "DATA_ERROR"
+    VALIDATION_ERROR = "VALIDATION_ERROR"
+    BROKER_ERROR = "BROKER_ERROR"
+    STRATEGY_ERROR = "STRATEGY_ERROR"
+    DATABASE_ERROR = "DATABASE_ERROR"
+    SYSTEM_ERROR = "SYSTEM_ERROR"
+
+class Severity(StrEnum):
+    INFO = "INFO"
+    WARNING = "WARNING"
+    CRITICAL = "CRITICAL"
+    RECOVERED = "RECOVERED"
+
+class DatasetStatus(StrEnum):
+    PLANNED = "PLANNED"
+    DOWNLOADING = "DOWNLOADING"
+    DOWNLOADED = "DOWNLOADED"
+    VALIDATED = "VALIDATED"
+    FAILED = "FAILED"
+    PARTIAL = "PARTIAL"
+
+class OptionType(StrEnum):
+    CALL = "CALL"
+    PUT = "PUT"
+
+class ExpiryFlag(StrEnum):
+    WEEK = "WEEK"
+    MONTH = "MONTH"

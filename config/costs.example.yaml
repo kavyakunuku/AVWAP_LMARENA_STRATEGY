@@ -1,0 +1,15 @@
+version: COSTS_EXAMPLE_V1
+notes: Example only. Replace with user-approved current broker/exchange charges before research/live use.
+brokerage:
+  option_sell_per_order: 20.0
+  option_buy_per_order: 20.0
+stt:
+  option_sell_rate: 0.000625
+exchange_charges:
+  nse_options_rate: 0.0003503
+gst:
+  rate: 0.18
+sebi:
+  rate: 0.000001
+stamp_duty:
+  option_buy_rate: 0.00003

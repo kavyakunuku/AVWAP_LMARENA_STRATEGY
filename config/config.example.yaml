@@ -1,0 +1,82 @@
+trading:
+  mode: PAPER
+  live_requires_confirmation: true
+
+strategy:
+  name: AVWAP_V1
+  timeframe: "15"
+  itm_strikes_per_side: 4
+  expiry_switch_day: 24
+
+risk:
+  quantity_per_trade: 1
+  max_open_positions: 10
+  max_trades_per_day: 20
+  max_daily_loss: 50000
+  max_capital_allocation: 0.50
+  max_underlying_exposure: 0.20
+
+data:
+  source: dhan
+  storage_root: data
+  parquet_root: data/parquet
+  raw_root: data/raw
+  metadata_db: data/metadata/catalog.sqlite
+  duckdb_path: data/duckdb/analytics.duckdb
+  default_interval: "15"
+  request_timeout_seconds: 30
+  dhan_base_url: https://api.dhan.co/v2
+
+universe:
+  indices:
+    - NIFTY
+    - BANKNIFTY
+  stocks:
+    - HDFCBANK
+    - RELIANCE
+    - ICICIBANK
+    - SBIN
+    - AXISBANK
+    - TATAMOTORS
+    - INFY
+    - TATASTEEL
+    - BHARTIARTL
+    - LT
+    - KOTAKBANK
+    - BAJFINANCE
+    - TCS
+    - ITC
+    - HINDALCO
+    - SUNPHARMA
+    - MARUTI
+    - M&M
+    - ADANIENT
+    - ADANIPORTS
+    - HCLTECH
+    - WIPRO
+    - TITAN
+    - NTPC
+    - POWERGRID
+    - ONGC
+    - COALINDIA
+    - CIPLA
+    - DRREDDY
+    - EICHERMOT
+    - BAJAJ-AUTO
+    - HEROMOTOCO
+    - SHRIRAMFIN
+    - GRASIM
+    - ULTRACEMCO
+    - ASIANPAINT
+    - HINDUNILVR
+    - BRITANNIA
+    - NESTLEIND
+    - TECHM
+    - JSWSTEEL
+    - TATACONSUM
+    - APOLLOHOSP
+
+dashboard:
+  host: 0.0.0.0
+  port: 8000
+  control_token_env: AVWAP_DASHBOARD_CONTROL_TOKEN

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+
+# Runtime/generated market data and local state
+data/raw/
+data/parquet/
+data/duckdb/
+data/cache/
+data/metadata/*.sqlite
+state/*.sqlite
+
+# Secrets
+.env
+*.secret
+.git-credentials
+.netrc
+
+# Frontend
+node_modules/
+dist/
+build/
